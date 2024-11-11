@@ -24,7 +24,7 @@
 
 </main>
 <footer>
-  <h1>Created with PHP, CSS, HTML and Javascript</h1>
+  Created with PHP, CSS, HTML and Javascript
 </footer>
 
 <body>

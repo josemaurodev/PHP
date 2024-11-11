@@ -127,6 +127,11 @@ table.divisao tr:nth-child(2) td:nth-child(1) {
     text-decoration: underline;
 }
 
+.resultado-verde{
+    color: #4CAF50 !important;
+    font-weight: bold;
+}
+
 ul > li::marker {
     color: #372991;
 }
