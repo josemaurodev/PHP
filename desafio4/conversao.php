@@ -24,7 +24,7 @@
       $cotacao = $dados["value"][0]["cotacaoCompra"];
       $real = $_GET["real"];
       
-      $valorEmDol = $real * $cotacao;
+      $valorEmDol = $real / $cotacao;
       $padraoInternacional = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
       
       print ("<p>Seus " . numfmt_format_currency($padraoInternacional, $real, "BRL") . " equivalem a: <strong>" . numfmt_format_currency($padraoInternacional, $valorEmDol, "USD") ."</strong></p>");
