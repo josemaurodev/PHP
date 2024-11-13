@@ -22,14 +22,18 @@
       $dados = json_decode(file_get_contents($url), true);
       
       $cotacao = $dados["value"][0]["cotacaoCompra"];
-      $real = $_GET["real"];
+      $dataHoraCotacao = $dados["value"][0]["dataHoraCotacao"];
+      $cotacaoData = new DateTime($dataHoraCotacao);
+      $dataFormatada = $cotacaoData->format('d/m/y');
+      
+      $real = $_GET["real"] ?? 0;
       
       $valorEmDol = $real / $cotacao;
       $padraoInternacional = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
       
       print ("<p>Seus " . numfmt_format_currency($padraoInternacional, $real, "BRL") . " equivalem a: <strong>" . numfmt_format_currency($padraoInternacional, $valorEmDol, "USD") ."</strong></p>");
 
-      print ("<p>Valor de cotação (" . numfmt_format_currency($padraoInternacional, $cotacao, "USD") . ") retirado diretamente do <a href='https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/aplicacao#!/recursos/CotacaoDolarDia' target='_blank'>Banco Central</a></p>");
+      print ("<p>Valor de cotação (<strong>" . numfmt_format_currency($padraoInternacional, $cotacao, "USD") . "</strong>) retirado diretamente do <a href='https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/aplicacao#!/recursos/CotacaoDolarDia' target='_blank'>Banco Central</a>, com data de <strong>$dataFormatada.</strong></p>");
       
       ?>
       <button onclick="window.location.href='index.html'">Voltar</button>
