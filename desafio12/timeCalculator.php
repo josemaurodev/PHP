@@ -23,8 +23,10 @@
   </main>
   <section>
     <?php
+    $anos = intdiv($segundos, 31536000);
+    $resto = $segundos % 31536000;
 
-    $semanas = intdiv($segundos, 604800); 
+    $semanas = intdiv($resto, 604800); 
     $resto = $segundos % 604800; 
 
     $dias = intdiv($resto, 86400); 
@@ -40,6 +42,7 @@
     <p>Analisando o valor que você digitou,
       <?php print "<strong>" .number_format($segundos, 0, ',', '.') . "</strong>"?>, equivalem a um total de:</p>
     <ul>
+      <li><?php print "$anos" ?> anos</li>
       <li><?php print "$semanas" ?> semanas</li>
       <li><?php print "$dias" ?> dias</li>
       <li><?php print "$horas" ?> horas</li>
