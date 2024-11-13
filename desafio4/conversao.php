@@ -39,6 +39,7 @@
       <button onclick="window.location.href='index.html'">Voltar</button>
     </section>
   </main>
+  <footer>Created with PHP, CSS, HTML and Javascript</footer>
 </body>
 
 </html>
