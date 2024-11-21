@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <h1><a href="index.php">CRUD</a></h1>
+    <h2>Cadastro</h2>
+    <form action="controller/createAction.php" method="post">
+      <label for="nome">Nome</label>
+      <input required type="text" name="nome" id="idnome">
+      <label for="email">E-mail</label>
+      <input required type="email" name="email" id="idemail">
+      <input type="submit" value="Create">
+    </form>
+  </main>
+  <footer>
+    <p>Created with HTML, CSS, Javascript and PHP</p>
+  </footer>
+</body>
+
+</html>
