@@ -18,6 +18,15 @@
       <input required type="text" name="nome" id="idnome">
       <label for="email">E-mail</label>
       <input required type="email" name="email" id="idemail">
+
+      <?php
+session_start();
+if (isset($_SESSION['error'])) {
+    echo '<p style="color: red;">' . $_SESSION['error'] . '</p>';
+    unset($_SESSION['error']); // Remove a mensagem após exibi-la
+}
+?>
+
       <input type="submit" value="Create">
     </form>
   </main>

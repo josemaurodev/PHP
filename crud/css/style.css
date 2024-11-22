@@ -1,0 +1,71 @@
+p {
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+h1 {
+  color: red;
+}
+
+table {
+  width: 50%;
+  border-collapse: separate; /* Altere para 'separate' */
+  border-spacing: 0; /* Remove espaçamento indesejado */
+  margin: 20px 0;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  border: 1px solid #dddddd; /* Adiciona borda ao redor da tabela */
+}
+
+th,
+td {
+  border: 1px solid #dddddd; /* Adiciona borda entre as células */
+  padding: 12px;
+}
+
+th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Coloração para linhas pares */
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Destaque ao passar o mouse */
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+i {
+  font-size: 1.2em; /* Ajuste o tamanho */
+  color: #007bff; /* Cor padrão */
+  margin-right: 5px; /* Espaçamento entre ícones */
+}
+
+.fas.fa-trash-alt {
+  color: red;
+}
+
+.fas.fa-trash-alt:hover {
+  color: #1eff00;
+}
+
+.fas.fa-edit:hover {
+  color: #1eff00;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.5em;
+}
