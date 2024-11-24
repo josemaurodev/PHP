@@ -11,7 +11,7 @@
 <body>
   <header></header>
   <main>
-    <h1><a href="index.php">CRUD</a></h1>
+
     <h2>Cadastro</h2>
     <form action="controller/createAction.php" method="post">
       <label for="nome">Nome</label>
@@ -29,6 +29,7 @@ if (isset($_SESSION['error'])) {
 
       <input type="submit" value="Create">
     </form>
+    <p><a href="index.php">See all users</a></p>
   </main>
   <footer>
     <p>Created with HTML, CSS, Javascript and PHP</p>

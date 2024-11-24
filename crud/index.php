@@ -76,13 +76,14 @@
         <td><?php print($usuario['nome']);?></td>
         <td><?php print($usuario['email']);?></td>
         <td>
-          <a href="edit.php?=id<?=$usuario['id'];?>" title="Edit"><i class="fas fa-edit"></i></a>
-          <a href="delete.php?=id<?=$usuario['id'];?>" title="Delete"><i class="fas fa-trash-alt"></i></a>
+          <a href="edit.php?id=<?=$usuario['id'];?>" title="Edit"><i class="fas fa-edit"></i></a>
+          <a href="controller/deleteAction.php?id=<?=$usuario['id'];?>" title="Delete"><i
+              class="fas fa-trash-alt"></i></a>
         </td>
       </tr>
       <?php endforeach; ?>
     </table>
-    <a href="create.php">Create</a>
+    <a href="create.php">Create a new user</a>
   </main>
   <footer>
     <p>Created with HTML, CSS, Javascript and PHP</p>
